@@ -92,7 +92,9 @@
     <ClCompile Include="imagePyramids.cpp" />
     <ClCompile Include="mydft.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myHist.cpp" />
     <ClCompile Include="myWarpAffine.cpp" />
+    <ClCompile Include="smooth.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="basicDraw.h" />
@@ -101,7 +103,9 @@
     <ClInclude Include="imagePyramids.h" />
     <ClInclude Include="mydft.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="myHist.h" />
     <ClInclude Include="myWarpAffine.h" />
+    <ClInclude Include="smooth.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -36,6 +36,12 @@
     <ClCompile Include="cvfile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="smooth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myHist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -57,6 +63,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="cvfile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="smooth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myHist.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

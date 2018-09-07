@@ -8,3 +8,5 @@
 #include "basicDraw.h"
 #include "myWarpAffine.h"
 #include "cvfile.h"
+#include "smooth.h"
+#include "myHist.h"

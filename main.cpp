@@ -8,13 +8,18 @@ int main()
 
 
 
-	cvfile f;
-	f.writefile();
-	f.readfile();
+	Mat img = imread("F:\\images\\hand_sample3.jpg");  //Í¼Æ¬Â·¾¶
+	
+	Mat img1 = img(Rect(0, 0, (int)(img.cols*0.5-1),img.rows));
+	//Mat img2 = img(Rect((int)(img.cols*0.5 - 1),0,img.cols , img.rows));
+	myHist h;
+	MatND h1 = h.do2dHist(img1);
+	MatND h0 = h.do2dHist(img);
+	float rs = h.calcEMD(h1, h0, 2);
+	cout << rs << endl;
 
 
 
-	//Mat img = imread("F:\\images\\LinuxLogo.jpg",0);  //Í¼Æ¬Â·¾¶
 
 	//Mat img = imread("F:\\images\\pic\\222.bmp",0);  //Í¼Æ¬Â·¾¶
 	//Mat src_change;
