@@ -1,4 +1,4 @@
-#include "myWarpAffine.h"
+ï»¿#include "myWarpAffine.h"
 using namespace cv;
 using namespace std;
 
@@ -14,10 +14,10 @@ myWarpAffine::~myWarpAffine()
 
 void myWarpAffine::dowf(Mat* img,Mat *rs)
 {
-	//¶şÎ¬×ø±êÏµ±ä»¯
-	double theta = 90;//Ğı×ª½Ç¶È
-	Point2f center = Point2f(160, 120);//Ğı×ªÖĞĞÄ
-	double scale = 1;//±ÈÀıÏµÊı
+	//äºŒç»´åæ ‡ç³»å˜åŒ–
+	double theta = 90;//æ—‹è½¬è§’åº¦
+	Point2f center = Point2f(160, 120);//æ—‹è½¬ä¸­å¿ƒ
+	double scale = 1;//æ¯”ä¾‹ç³»æ•°
 	Mat m = getRotationMatrix2D(center, theta, scale);
 	warpAffine(*img, *rs, m, Size(0.1, 0.1));
 }

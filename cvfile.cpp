@@ -1,4 +1,4 @@
-#include "cvfile.h"
+ï»¿#include "cvfile.h"
 using namespace cv;
 using namespace std;
 
@@ -12,7 +12,7 @@ cvfile::~cvfile()
 }
 
 
-//xml,ymalÎÄ¼þ¶ÁÐ´
+//xml,ymalæ–‡ä»¶è¯»å†™
 void cvfile::writefile()
 {
 	FileStorage fs;
