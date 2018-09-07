@@ -1,4 +1,4 @@
-#include "findcounters.h"
+ï»¿#include "findcounters.h"
 
 
 findcounters::findcounters()
@@ -22,11 +22,11 @@ int findcounters::dofind(Mat img)
 
 	vector<vector<Point>> contours;
 	vector<Vec4i> hierarchy;
-	//ÕÒ±ß½ç
+	//æ‰¾è¾¹ç•Œ
 	//findContours(img, contours, hierarchy, CV_RETR_CCOMP, CV_CHAIN_APPROX_SIMPLE);
-	//Ö»¼ì²â×îÍâ²ã
+	//åªæ£€æµ‹æœ€å¤–å±‚
 	findContours(img, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
-	////ÌáÇ°ËùÓĞÂÖÀª£¬²¢·ÅÔÚlistÖĞ£¬¼ì²â³öµÄÂÖÀª²»½¨Á¢µÈ¼¶¹ØÏµ
+	////æå‰æ‰€æœ‰è½®å»“ï¼Œå¹¶æ”¾åœ¨listä¸­ï¼Œæ£€æµ‹å‡ºçš„è½®å»“ä¸å»ºç«‹ç­‰çº§å…³ç³»
 	//findContours(img, contours, hierarchy, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE);
 	////retrieves all of the contours and reconstructs a full hierarchy of nested contours.
 	//findContours(img, contours, hierarchy, CV_RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
@@ -34,13 +34,13 @@ int findcounters::dofind(Mat img)
 	//findContours(img, contours, hierarchy, CV_CHAIN_APPROX_NONE, CV_CHAIN_APPROX_SIMPLE);
 	////compresses horizontal, vertical, and diagonal segments and leaves only their end points. For example, an up-right rectangular contour is encoded with 4 points.
 	//findContours(img, contours, hierarchy, CV_CHAIN_APPROX_SIMPLE, CV_CHAIN_APPROX_SIMPLE);
-	//// applies one of the flavors of the Teh - Chin chain approximation algorithm¡¾CV_CHAIN_APPROX_TC89_L1,CV_CHAIN_APPROX_TC89_KCOS¡¿
+	//// applies one of the flavors of the Teh - Chin chain approximation algorithmã€CV_CHAIN_APPROX_TC89_L1,CV_CHAIN_APPROX_TC89_KCOSã€‘
 
 	int index = 0;
 	for (; index < contours.size(); index++)
 	{
 		Scalar color(rand() & 255, rand() & 255, rand()&255);
-		//»­±ß½ç£¬Ã¿´Î»­Ò»¸ù
+		//ç”»è¾¹ç•Œï¼Œæ¯æ¬¡ç”»ä¸€æ ¹
 		drawContours(dst, contours, index, color, 1, 8, hierarchy);
 
 	}

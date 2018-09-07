@@ -1,4 +1,4 @@
-#include "basicDraw.h"
+ï»¿#include "basicDraw.h"
 #define HIGHT 1000
 #define WEIGHT 1000
 
@@ -21,7 +21,7 @@ basicDraw::~basicDraw()
 
 int basicDraw::drawLine(int x0,int y0,int x1,int y1)
 {
-	//Í¼Ïñ£¬Æğµã£¬ÖÕµã£¬ÑÕÉ«£¬Ïß¿í£¬ÏßĞÍ
+	//å›¾åƒï¼Œèµ·ç‚¹ï¼Œç»ˆç‚¹ï¼Œé¢œè‰²ï¼Œçº¿å®½ï¼Œçº¿å‹
 	line(pic, Point(x0, y0), Point(x1, y1), Scalar(0, 0, 255), thickness, lineType);
 	imshow(picName, pic);
 	return 0;
@@ -29,7 +29,7 @@ int basicDraw::drawLine(int x0,int y0,int x1,int y1)
 int basicDraw::drawEllipse(int x,int y,int angle)
 {
 
-	//Í¼Ïñ£¬Ô²ĞÄ£¬£¨xÖá³¤£¬yÖá³¤£©£¬Ğı×ª½Ç¶È£¬ÆğÊ¼½Ç¶È£¬½áÊø½Ç¶È¡¾Ë³Ê±Õë¡¿£¬ÑÕÉ«£¬Ïß¿í£¬ÏßĞÍ
+	//å›¾åƒï¼Œåœ†å¿ƒï¼Œï¼ˆxè½´é•¿ï¼Œyè½´é•¿ï¼‰ï¼Œæ—‹è½¬è§’åº¦ï¼Œèµ·å§‹è§’åº¦ï¼Œç»“æŸè§’åº¦ã€é¡ºæ—¶é’ˆã€‘ï¼Œé¢œè‰²ï¼Œçº¿å®½ï¼Œçº¿å‹
 	ellipse(pic, Point(x, y), Size(25,50),angle,0,300,Scalar(0, 0, 255), thickness, lineType);
 	imshow(picName, pic);
 	return 0;
@@ -42,7 +42,7 @@ int basicDraw::drawRectangle(int x0, int y0, int x1, int y1)
 }
 int basicDraw::drawCircle(int x,int y,double radius)
 {
-	//Í¼Ïñ£¬Ô²ĞÄ£¬°ë¾¶£¬ÑÕÉ«£¬Ïß¿í£¬ÏßĞÍ
+	//å›¾åƒï¼Œåœ†å¿ƒï¼ŒåŠå¾„ï¼Œé¢œè‰²ï¼Œçº¿å®½ï¼Œçº¿å‹
 	circle(pic, Point(x, y), radius, Scalar(0, 255, 0), thickness, lineType);
 	imshow(picName, pic);
 	return 0;
@@ -56,7 +56,7 @@ int basicDraw::drawFilledpolygon()
 	points[0][3] = Point(200, 600);
 	const Point* ptr[1] = { points[0] };
 	int num[] = { 4 };
-	//Í¼Ïñ£¬µãÎ»ÖÃ£¨¶şÎ¬Êı×é£©£¬µãÊıÁ¿£¨Ò»Î»Êı×é£©£¬¶à±ßĞÎÊıÁ¿£¬ÑÕÉ«£¬ÏßĞÍ
+	//å›¾åƒï¼Œç‚¹ä½ç½®ï¼ˆäºŒç»´æ•°ç»„ï¼‰ï¼Œç‚¹æ•°é‡ï¼ˆä¸€ä½æ•°ç»„ï¼‰ï¼Œå¤šè¾¹å½¢æ•°é‡ï¼Œé¢œè‰²ï¼Œçº¿å‹
 	fillPoly(pic,ptr,num,1,Scalar(255, 0, 0), lineType);
 	imshow(picName, pic);
 	return 0;

@@ -1,6 +1,6 @@
-#include "mydft.h"
+ï»¿#include "mydft.h"
 
-//ÀëÉ¢¸µÀïÒ¶±ä»»
+//ç¦»æ•£å‚…é‡Œå¶å˜æ¢
 
 
 mydft::mydft()
@@ -22,14 +22,14 @@ int mydft::dodft(cv::Mat img)
 	Mat padded;
 	int m = getOptimalDFTSize(I.rows);
 	int n = getOptimalDFTSize(I.cols);
-	//Ê¹ÓÃ0À©³äÔ­Ê¼¾ØÕóÖÁºÏÊÊ´óĞ¡
+	//ä½¿ç”¨0æ‰©å……åŸå§‹çŸ©é˜µè‡³åˆé€‚å¤§å°
 	copyMakeBorder(I, padded,0, m - I.rows, 0, n - I.cols, BORDER_CONSTANT, Scalar::all(0));
 
 	Mat planes[] = { Mat_<float>(padded), Mat::zeros(padded.size(), CV_32F) };
 	Mat complexI;
-	//ºÏ²¢ÁíÒ»¸öÈ«0¾ØÕó
+	//åˆå¹¶å¦ä¸€ä¸ªå…¨0çŸ©é˜µ
 	merge(planes, 2, complexI);
-	//Ö´ĞĞ¸µÀïÒ¶±ä»»
+	//æ‰§è¡Œå‚…é‡Œå¶å˜æ¢
 	cv::dft(complexI, complexI);
 
 	split(complexI, planes);
@@ -38,7 +38,7 @@ int mydft::dodft(cv::Mat img)
 
 	magI += Scalar::all(1);
 	log(magI, magI);
-	magI = magI(Rect(0, 0, magI.cols&-2, magI.rows&-2));//-2ÔÚ¼ÆËã»úÒÔ²¹ÂëĞÎÊ½´¢´æ£¨1111 1111 1111 1110£©£¬×öÂß¼­Óë²Ù×÷¿ÉÒÔÈ¥µôÆæÊıÁĞ/ĞĞ
+	magI = magI(Rect(0, 0, magI.cols&-2, magI.rows&-2));//-2åœ¨è®¡ç®—æœºä»¥è¡¥ç å½¢å¼å‚¨å­˜ï¼ˆ1111 1111 1111 1110ï¼‰ï¼Œåšé€»è¾‘ä¸æ“ä½œå¯ä»¥å»æ‰å¥‡æ•°åˆ—/è¡Œ
 
 	int cx = magI.cols / 2;
 	int cy = magI.rows / 2;
