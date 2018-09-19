@@ -74,6 +74,7 @@ MatND myHist::dohist(Mat img)
 		rectangle(dstImag, Point(i*scale, size - 1), Point((i + 1)*scale - 1, size - realvalue), Scalar(255));
 
 	}
+	namedWindow("or", WINDOW_NORMAL);
 	imshow("or", img);
 	imshow("一维直方图", dstImag);
 	waitKey();

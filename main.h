@@ -10,3 +10,4 @@
 #include "cvfile.h"
 #include "smooth.h"
 #include "myHist.h"
+#include "myWatershed.h"
