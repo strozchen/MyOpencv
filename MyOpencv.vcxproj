@@ -90,9 +90,11 @@
     <ClCompile Include="cvfile.cpp" />
     <ClCompile Include="findcounters.cpp" />
     <ClCompile Include="imagePyramids.cpp" />
+    <ClCompile Include="myCalcBackProject.cpp" />
     <ClCompile Include="mydft.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myHist.cpp" />
+    <ClCompile Include="myinpaint.cpp" />
     <ClCompile Include="myWarpAffine.cpp" />
     <ClCompile Include="myWatershed.cpp" />
     <ClCompile Include="smooth.cpp" />
@@ -102,9 +104,11 @@
     <ClInclude Include="cvfile.h" />
     <ClInclude Include="findcounters.h" />
     <ClInclude Include="imagePyramids.h" />
+    <ClInclude Include="myCalcBackProject.h" />
     <ClInclude Include="mydft.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="myHist.h" />
+    <ClInclude Include="myinpaint.h" />
     <ClInclude Include="myWarpAffine.h" />
     <ClInclude Include="myWatershed.h" />
     <ClInclude Include="smooth.h" />

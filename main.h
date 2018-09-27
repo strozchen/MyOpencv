@@ -11,3 +11,4 @@
 #include "smooth.h"
 #include "myHist.h"
 #include "myWatershed.h"
+#include "myCalcBackProject.h"
